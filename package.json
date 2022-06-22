@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "_build": "esbuild src/1.ts src/2.ts --bundle",
+    "build": "npm run _build -- --outdir=dist --minify",
+    "dev": "npm run _build -- --servedir=public"
   },
   "repository": {
     "type": "git",
